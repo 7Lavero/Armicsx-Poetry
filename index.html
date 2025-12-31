@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armicsx Poetry - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .8; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex gap-3 overflow-x-auto pb-2">
+                <button onclick="showSection('home')" class="nav-btn px-4 py-2 rounded-full transition bg-gradient-to-r from-purple-500 to-pink-500 text-white">Accueil</button>
+                <button onclick="showSection('about')" class="nav-btn px-4 py-2 rounded-full transition bg-white/5 hover:bg-white/10 text-white">À Propos</button>
+                <button onclick="showSection('journey')" class="nav-btn px-4 py-2 rounded-full transition bg-white/5 hover:bg-white/10 text-white">Mon Parcours</button>
+                <button onclick="showSection('skills')" class="nav-btn px-4 py-2 rounded-full transition bg-white/5 hover:bg-white/10 text-white">Compétences</button>
+                <button onclick="showSection('gallery')" class="nav-btn px-4 py-2 rounded-full transition bg-white/5 hover:bg-white/10 text-white">Galerie</button>
+                <button onclick="showSection('process')" class="nav-btn px-4 py-2 rounded-full transition bg-white/5 hover:bg-white/10 text-white">Mon Processus</button>
+                <button onclick="showSection('contact')" class="nav-btn px-4 py-2 rounded-full transition bg-white/5 hover:bg-white/10 text-white">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section-content">
+        <div class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-purple-500/20 to-blue-500/20 animate-pulse-slow"></div>
+            <div class="relative max-w-6xl mx-auto px-6 py-32 text-center">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                    Armicsx Poetry
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-4 italic">
+                    Où les émotions deviennent mots, et les mots deviennent art
+                </p>
+                <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Poète depuis 5 ans, je transforme l'ordinaire en extraordinaire à travers les mots. 
+                    Chaque poème est un univers où la beauté rencontre l'émotion.
+                </p>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <a href="https://instagram.com/armicsx" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full hover:scale-105 transition text-white">
+                        📷 @armicsx
+                    </a>
+                    <button onclick="showSection('gallery')"
+                            class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:scale-105 transition text-white">
+                        🖼️ Voir mes créations
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-content hidden">
+        <div class="max-w-4xl mx-auto px-6 py-20">
+            <div class="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/10">
+                <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                    À Propos
+                </h2>
+                <div class="text-gray-300 text-lg leading-relaxed space-y-4">
+                    <p>
+                        Bonjour ! Je suis Armicsx, poète francophone passionné par l'art de transformer les émotions en mots puissants.
+                    </p>
+                    <p>
+                        J'ai toujours eu une facilité à utiliser les mots pour décrire des choses que beaucoup disent avec simplicité 
+                        et parfois peu de beauté. Pour moi, écrire c'est être maître de l'univers que je crée à travers mes écrits.
+                    </p>
+                    <p>
+                        Chaque poème est une invitation à ressentir, à rêver, à vivre pleinement. Je cherche à donner vie à mes écrits 
+                        en leur conférant de la beauté, qu'il s'agisse d'une déclaration d'amour, d'un texte engagé, ou de paroles de chansons.
+                    </p>
+                    <p class="font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
+                        Spécialisé en poésie personnalisée, paroles de chansons, et textes créatifs qui touchent l'âme.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="section-content hidden">
+        <div class="max-w-4xl mx-auto px-6 py-20">
+            <div class="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/10">
+                <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+                    Mon Parcours
+                </h2>
+                
+                <div class="space-y-8">
+                    <div class="border-l-4 border-purple-500 pl-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Les Débuts (il y a 5 ans)</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            J'ai commencé à écrire il y a près de 5 ans, d'abord sur papier. Très vite, j'ai réalisé que j'avais 
+                            une facilité naturelle à jouer avec les mots pour créer des images et des émotions. Chaque phrase 
+                            devenait un tableau, chaque vers un univers.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-pink-500 pl-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Mes Influences</h3>
+                        <p class="text-gray-300 leading-relaxed mb-3">
+                            Mes influences sont plus musicales que littéraires :
+                        </p>
+                        <ul class="text-gray-300 space-y-2 ml-4">
+                            <li class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">•</span>
+                                <span><strong>Kendrick Lamar</strong> - Pour sa direction artistique et ses écrits profonds</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400 mt-1">•</span>
+                                <span><strong>Luidji</strong> - Pour le côté abstrait de ses chansons</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 mt-1">•</span>
+                                <span><strong>Tartuffe (Molière)</strong> - Une œuvre qui a inspiré nombreux de mes vers</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-4 border-blue-500 pl-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">L'Évolution</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Après avoir longtemps écrit sur papier, j'ai rejoint Instagram pour partager mes œuvres avec le monde. 
+                            Cette plateforme m'a permis de toucher des lecteurs qui résonnent avec mon style authentique et émotionnel.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-orange-500 pl-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Ma Vision</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Aujourd'hui, je continue d'explorer les frontières entre poésie, musique et art visuel. Mon objectif : 
+                            créer des textes qui marquent, qui restent, qui font ressentir quelque chose de vrai.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-content hidden">
+        <div class="max-w-5xl mx-auto px-6 py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+                    Mes Compétences
+                </h2>
+                <p class="text-gray-400 text-lg">Les styles et formes que je maîtrise</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/30 transition group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mb-4 group-hover:scale-110 transition text-3xl">
+                        ❤️
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Poésie d'Amour</h3>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/30 transition group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition text-3xl">
+                        🌍
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Poésie Engagée</h3>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/30 transition group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition text-3xl">
+                        🖋️
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Vers Libres</h3>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/30 transition group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-4 group-hover:scale-110 transition text-3xl">
+                        🎤
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Paroles de Chansons</h3>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/30 transition group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition text-3xl">
+                        📖
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Français (Natif)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-content hidden">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent mb-4">
+                    Mes Créations
+                </h2>
+                <p class="text-gray-400">Portfolio de mes poèmes et textes</p>
+                <p class="text-gray-500 mt-4 text-sm">
+                    Note : Cette version est statique. Pour ajouter des poèmes, visitez la version complète avec gestion de contenu.
+                </p>
+            </div>
+
+            <div class="text-center text-gray-400 py-20">
+                <div class="text-6xl mb-4">🖼️</div>
+                <p class="text-xl mb-4">Galerie de poèmes</p>
+                <p class="mb-6">Retrouvez mes créations sur Instagram</p>
+                <a href="https://instagram.com/armicsx" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full hover:scale-105 transition text-lg font-semibold text-white">
+                    📷 Voir sur Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section-content hidden">
+        <div class="max-w-4xl mx-auto px-6 py-20">
+            <div class="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/10">
+                <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                    Mon Processus Créatif
+                </h2>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            ✨ L'Inspiration
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Je m'inspire principalement de la nature et parfois d'un mot ou d'une expression qui me vient de manière 
+                            soudaine. Une phrase entendue, une image vue, une émotion ressentie - tout peut devenir le point de départ 
+                            d'un poème.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            🖋️ La Création
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Une fois l'étincelle trouvée, je cherche à donner vie à mes écrits en leur conférant de la beauté. 
+                            Chaque mot est pesé, chaque vers est ciselé. Je ne me contente pas de dire les choses - je les 
+                            transforme en art.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            ⏱️ Le Temps
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Certains poèmes naissent en 15 minutes, dans un flux créatif intense. D'autres prennent plusieurs jours 
+                            (3 maximum) à mûrir, se transformer, trouver leur forme finale. Je laisse le temps nécessaire à chaque 
+                            texte pour atteindre sa perfection.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-2xl p-6 border border-white/10">
+                        <p class="text-white text-lg italic text-center">
+                            "Écrire, c'est être maître de l'univers que je crée. Chaque poème est un monde où je décide des règles, 
+                            des émotions, de la beauté."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-content hidden">
+        <div class="max-w-4xl mx-auto px-6 py-20">
+            <div class="bg-gradient-to-r from-orange-500/10 via-purple-500/10 to-blue-500/10 backdrop-blur-lg rounded-3xl p-12 border border-white/10 text-center">
+                <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+                    Commandez votre poème personnalisé
+                </h2>
+                <p class="text-gray-300 text-lg mb-8">
+                    Pour un mariage, un anniversaire, une déclaration d'amour, des paroles de chanson, ou simplement pour immortaliser une émotion...
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="mailto:miassiaryxmar@gmail.com"
+                       class="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full hover:scale-105 transition text-lg font-semibold text-white">
+                        ✉️ miassiaryxmar@gmail.com
+                    </a>
+                    <a href="https://instagram.com/armicsx" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full hover:scale-105 transition text-lg font-semibold text-white">
+                        📷 DM sur Instagram
+                    </a>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                    <h3 class="text-xl font-bold text-white mb-3">Délais de création</h3>
+                    <p class="text-gray-300">
+                        Selon la complexité : de 15 minutes à 3 jours maximum. Je prends le temps nécessaire pour que chaque texte atteigne sa perfection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="text-center py-8 text-gray-500 border-t border-white/10">
+        <p>© 2025 Armicsx Poetry - Tous droits réservés</p>
+        <p class="text-sm mt-2">Fait avec passion et créativité 🖋️✨</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            // Update nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = 'nav-btn px-4 py-2 rounded-full transition bg-white/5 hover:bg-white/10 text-white';
+            });
+            event.target.className = 'nav-btn px-4 py-2 rounded-full transition bg-gradient-to-r from-purple-500 to-pink-500 text-white';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
